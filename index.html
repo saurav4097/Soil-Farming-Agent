@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-section">
+            <h1>Welcome to  Soil Farming Agent</h1>
+            
+        </div>
+        <div class="login-section">
+            <h2>USER LOGIN</h2>
+            <form action="/login" method="POST" id="loginForm">  <!-- Added action and method -->
+                <div class="input-container">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" placeholder="email" class="input-field" name="email" required>
+                </div>
+                <div class="input-container">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" id="password"  placeholder="Password" class="input-field" name="password" required>
+                    <i class="fa fa-eye toggle-password" id="togglePassword" style="cursor: pointer; margin-left: 10px;"></i>
+                </div>
+                
+                <button type="submit" class="login-btn">LOGIN</button>
+               
+            </form>
+            
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const togglePassword = document.getElementById("togglePassword");
+            const passwordInput = document.getElementById("password");
+        
+            togglePassword.addEventListener("click", () => {
+                const isPassword = passwordInput.type === "password";
+                passwordInput.type = isPassword ? "text" : "password";
+                
+                // Toggle icon class
+                togglePassword.classList.toggle("fa-eye");
+                togglePassword.classList.toggle("fa-eye-slash");
+            });
+        });
+        
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("loginForm");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent actual form submission
+        // Optionally, validate input values here
+        // Then redirect to user.html
+        window.location.href = "user.html";
+    });
+});
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

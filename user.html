@@ -1,0 +1,30 @@
+    <!-- user.html -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Dashboard</title>
+        <link rel="stylesheet" href="user.css">
+        <script src="firebase-config.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">Soil Farming Agent</div>
+            <button onclick="window.location.href='admin.html'">Admin</button>
+        </header>
+        <main>
+            <div class="container">
+                <div class="half-screen">
+                    <h2>Soil Details</h2>
+                    <ul id="soilList"></ul>
+                </div>
+                <div class="half-screen">
+                    <h2>Distributor Details</h2>
+                    <ul id="distributorList"></ul>
+                </div>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+    </html>

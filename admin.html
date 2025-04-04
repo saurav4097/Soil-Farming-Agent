@@ -1,0 +1,46 @@
+
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="firebase-config.js"></script>
+</head>
+<body>
+    <button class="back-button" onclick="window.location.href='user.html'">⬅ Back to User Page</button>
+    <h1>Admin Dashboard</h1>
+    <div class="container">
+       
+        <div class="card">
+            <h2>Post Soil Details</h2>
+            <form id="soilForm">
+                <label>Soil Type:</label>
+                <input type="text" id="soilType" required>
+                <label>Characteristics:</label>
+                <textarea id="soilDesc" required></textarea>
+                <label>Suitable Crops:</label>
+                <input type="text" id="soilCrops" required>
+                <button type="submit">Submit Soil</button>
+            </form>
+        </div>
+        <div class="card">
+            <h2>Post Distributor Details</h2>
+            <form id="distributorForm">
+                <label>Name:</label>
+                <input type="text" id="distName" required>
+                <label>Location:</label>
+                <input type="text" id="distLocation" required>
+                <label>Crops Available:</label>
+                <input type="text" id="distCrops" required>
+                <label>Contact Number:</label>
+                <input type="text" id="distContact" required>
+                <button type="submit">Submit Distributor</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
